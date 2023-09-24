@@ -310,7 +310,7 @@
     <div class="container">
         <h1 class="text-center">CONTACTO</h1>
         <hr>
-        <form action="https://formsubmit.co/2eee7a7494ac56d7bc1905e44457550f" method="POST">
+        <form action="https://formsubmit.co/2eee7a7494ac56d7bc1905e44457550f" method="POST"   id="formulario">
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" class="form-control" name="nombre" id="nombre" required>
@@ -328,8 +328,12 @@
                 <label class="form-check-label" for="acepto" >Acepto la politica de privacidad</label>
               </div>
               <div class="d-grid gap-2 col-6 mx-auto">
-              <button type="submit" class="btn btn-outline-success ">Enviar</button>
+              <button type="submit" class="btn btn-outline-success " onclick="impiar()">Enviar</button>
+
+              <input type="hidden" name="_next" value="https://carlojavlop.github.io/portafolio/#inicio">
+              <input type="hidden" name="_captcha" value="false">
             </div>
+            
         </form>
         
 

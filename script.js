@@ -44,3 +44,6 @@ function efectoHabilidades() {
 
 }
 
+function limpiar(){
+formulario.reset();
+}
