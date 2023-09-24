@@ -1,40 +1,16 @@
 <?php 
+$destinatario = "javisolrac98@gmail.com";
 
-$correo = $_POST['correo'];
+$email = $_POST['email'];
 $nombre = $_POST['nombre'];
 $mensaje = $_POST['mensaje'];
 
+$headers="Enviando desde mi Portafolio";
+$mensajeCompleto=$mensaje."/nAtentamnete: ".$nombre;
 
-//echo $correo . " " . $nombre . " " . $mensaje;
 
-
-$destinatario = "javisolrac98@gmail.com";
-$asunto = "Envio desde sitio portafolio de contacto"; 
-$cuerpo = '
-    <html> 
-        <head> 
-            <title>Infotmación</title> 
-        </head>
-
-        <body> 
-            <h1>Contacto</h1>
-            <p> 
-                Contacto:  '.$nombre . ' - ' . $asunto .'  <br>
-                Mensaje: '.$mensaje.' 
-            </p> 
-        </body>
-    </html>
-';
-//para el envío en formato HTML 
-$headers = "MIME-Version: 1.0\r\n"; 
-$headers .= "Content-type: text/html; charset=UTF8\r\n"; 
-
-//dirección del remitente
-
-$headers .= "FROM: $nombre <$correo>\r\n";
-mail($destinatario,$asunto,$cuerpo,$headers);
-
-echo "Correo enviado"; 
+mail($destinatario,$headers,$mensajeCompleto);
+echo"<script>alert('correo enviado exitosamente')</scripr>";
+echo"<script> setTimeout(\"locatio.href='index.html'\",1000)</scripr>";
 ?> 
 
-<a href="index.html">Volver a inicio</a>
